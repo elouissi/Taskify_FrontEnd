@@ -49,6 +49,8 @@ export default function TaskListe() {
       name  : hadleName.current.value,
       status : hadleselect.current.value
     })
+
+
     const formData = new FormData();
     formData.append('name', values.name);
     formData.append('status', values.status);
@@ -111,12 +113,12 @@ const display = () => {
             return task.name.includes(search);
         });
         return searchdata.map(task => (
-            <TaskItem key={task.id} tasks={task} />
+            <TaskItem key={task.id} taskList={taskList} fetchTasks={fetchTasks} tasks={task} />
         ));
     }
 
     return taskList.map(task => (
-        <TaskItem key={task.id} tasks={task} />
+        <TaskItem key={task.id} taskList={taskList} fetchTasks={fetchTasks} tasks={task} />
     ));
 };
 
