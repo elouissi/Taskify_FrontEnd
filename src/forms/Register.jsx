@@ -14,6 +14,11 @@ function Register({setIsLoggedIn,IsLoggedIn}) {
   const inputPasswordRef = useRef();
   const inputNameRef = useRef();
   const navigate = useNavigate();
+  
+
+  if(!IsLoggedIn){
+    navigate('/')
+  }
 
 
   const [FormValues, SetFormValues] = useState({});

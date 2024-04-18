@@ -9,13 +9,19 @@ import {
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
 
-function Login({isLoggedIn, setIsLoggedIn}) {
+function Login({IsLoggedIn, setIsLoggedIn}) {
   const inputEmailRef = useRef();
   const inputPasswordRef = useRef();
   const navigate = useNavigate();
 
   const [FormValues, SetFormValues] = useState({});
   let formValid = true;
+
+  
+  if(!IsLoggedIn){
+    navigate('/')
+  }
+
 
 
   const validateForm = () => {

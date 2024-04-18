@@ -155,12 +155,11 @@ const handleShow = (e) =>{
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>choisir le status</Form.Label>
-              <Form.Select aria-label=" select" ref={hadleselect}
->
+              <Form.Select aria-label=" select" ref={hadleselect}>
                 <option selected disabled >{Search.status}</option>
-                <option  value="in progress">En cours</option>
-                <option value="to do">En attente</option>
-                <option value="done">Terminé</option>
+                <option  defaultValue="in progress">in progress</option>
+                <option defaultValue="to do">to do</option>
+                <option defaultValue="done">done</option>
               </Form.Select>           
                </Form.Group>
           </Form>
